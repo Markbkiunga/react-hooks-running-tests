@@ -54,18 +54,18 @@ each component. A typical test file looks something like this:
 
 ```jsx
 // import libraries needed for testing
-import "@testing-library/jest-dom";
-import { render, screen } from "@testing-library/react";
-import React from "react";
+import '@testing-library/jest-dom';
+import { render, screen } from '@testing-library/react';
+import React from 'react';
 
 // import the component you wrote
-import Article from "../components/Article";
+import Article from '../components/Article';
 
 // test the component
 test("displays the text 'please pass this test'", () => {
   render(<Article />);
 
-  expect(screen.queryByText("please pass this test")).toBeInTheDocument();
+  expect(screen.queryByText('please pass this test')).toBeInTheDocument();
 });
 ```
 
@@ -77,7 +77,7 @@ your component file itself. Let's focus on the test itself:
 test("displays the text 'please pass this test'", () => {
   render(<Article />);
 
-  expect(screen.queryByText("please pass this test")).toBeInTheDocument();
+  expect(screen.queryByText('please pass this test')).toBeInTheDocument();
 });
 ```
 
@@ -193,7 +193,7 @@ See if you can get this test passing by updating the code in `src` >
 `components` > `Header.js` as follows:
 
 ```jsx
-import React from "react";
+import React from 'react';
 
 function Header(props) {
   return <h1>hello from the Header!</h1>;
@@ -226,7 +226,7 @@ test("displays the text 'please pass this test'", () => {
   // add this line
   screen.debug();
 
-  expect(screen.queryByText("please pass this test")).toBeInTheDocument();
+  expect(screen.queryByText('please pass this test')).toBeInTheDocument();
 });
 ```
 
@@ -247,7 +247,7 @@ We can also use this method to debug a single element:
 test("displays the text 'please pass this test'", () => {
   render(<Article />);
 
-  const element = screen.queryByText("please pass this test");
+  const element = screen.queryByText('please pass this test');
 
   screen.debug(element);
 
@@ -288,8 +288,7 @@ better sense of how the test is written.
 
 [jest]: https://jestjs.io/
 [jest-docs]: https://jestjs.io/docs/getting-started
-[react testing library]:
-  https://testing-library.com/docs/react-testing-library/intro
+[react testing library]: https://testing-library.com/docs/react-testing-library/intro
 [jest-dom]: https://testing-library.com/docs/ecosystem-jest-dom
 [query methods]: https://testing-library.com/docs/queries/about#priority
 [jsdom]: https://github.com/jsdom/jsdom
